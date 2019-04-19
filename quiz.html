@@ -1,0 +1,39 @@
+<%@page import="java.sql.*"%>
+<html>
+<body>
+<% 
+      String question;
+	  String option1;
+	  String option2;
+	  String option3;
+	  String option4;
+
+           try
+			{
+				Class.forName("com.mysql.jdbc.Driver");
+	        String url="jdbc:mysql://localhost:3306/placementtyari";
+		    Connection conn=DriverManager.getConnection(url,"root","");
+		   
+		    Statement stmt=conn.createStatement();
+			Resultset rs=stmt.executeQuery("select * from aptitudeque");
+			
+			 while(rs.next())
+			 {
+			    question=rs.getString("question");
+				out.println(question);
+				option1=rs.getString("option1");
+				option2=rs.getString("option2");
+				option3=rs.getString("option3");
+				option4=rs.getString("option4");
+			 
+			 }
+		
+			conn.close();
+			} 
+			catch(Exception e)
+			{
+				 out.println(e);
+		    }
+%>
+</body>
+</html>
