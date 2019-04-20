@@ -1,9 +1,9 @@
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 70%;
-  padding: 12px ;
-  margin: 8px;
+  width: 50%;
+  padding-right:24px ;
+  margin-right: 20px;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
@@ -25,10 +25,10 @@ button {
 {
 	margin-left:0px;
 }
-label
+.shift
 {
-	margin-left:5px;
-	margin-right:20px;
+	padding-left:40px;
+	margin-left:-40px;
 }
 
 /* Center the image and position the close button */
@@ -45,7 +45,10 @@ img.avatar {
 }
 
 .container {
-  padding: 6px;
+ 
+ 
+  padding:10px 10px;
+  margin-right:20px;
  
 }
 
