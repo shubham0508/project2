@@ -4,6 +4,9 @@
     
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="login1.css">
 	<style>
 	.navbar 
 	{
@@ -88,8 +91,49 @@
       </li>  
       
 	 
-	  <li class="nav-item active top si">
-	  <a class="nav-link fa fa-fw fa-user-circle" href="#">Login</a>                                              
+	  <li class="nav-item active">
+	  <button onclick="document.getElementById('id01').style.display='block'" class="fas fa-user-circle">Login</button>
+
+			<div id="id01" class="modal">
+			  
+			  <form class="modal-content animate" action="logindirection.jsp">
+			  
+				<div class="imgcontainer">
+				  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				  <img src="login.jpg" alt="Avatar" class="avatar">
+				</div>
+
+				<div class="container">
+				  <label><b>Username:</b></label>
+				  <input type="text" placeholder="Enter Username" name="uname" required>
+                   <br>
+				  <label><b>Password:</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+					
+				  <button type="submit" class="pad btn-success">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn-danger">Cancel</button>
+				  <span class="psw pass">Forgot<a href="#">password?</a></span>
+				</div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>                                           
       </li>
       
 	  
