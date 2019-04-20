@@ -104,12 +104,37 @@
 				</div>
 
 				<div class="container">
+				  <div class="row">
+				    <div class="col-lg-2">
 				  <label><b>Username:</b></label>
-				  <input type="text" placeholder="Enter Username" name="uname" required>
-                   <br>
+				    </div>
+					<div class="col-lg-10">
+				  <input type="text" placeholder="Enter Username" name="uname" class="form-control" required>
+                   </div>
+				   </div>
+				   <br>
+				   <div class="row">
+				    <div class="col-lg-2">
 				  <label><b>Password:</b></label>
-				  <input type="password" placeholder="Enter Password" name="psw" required>
-					
+				  </div>
+				  <div class="col-lg-10">
+				  <input type="password" placeholder="Enter Password" name="psw" class="form-control"  required>
+				  </div>
+				   </div>
+				  <br>
+				  <div class="row">
+				  <div class="col-3">
+				     <label for="sel1"><b>User Type:</b></label>
+				  </div>
+				  <div class="col-5 shift">
+				       <select class="form-control shift" id="sel1">
+                           <option>Student</option>
+                            <option>College</option>
+                            <option>faculty</option>
+                            <option>Company</option>
+                         </select>
+					</div>
+					</div>
 				  <button type="submit" class="pad btn-success">Login</button>
 				  <label>
 					<input type="checkbox" checked="checked" name="remember"> Remember me
